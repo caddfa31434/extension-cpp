@@ -41,8 +41,8 @@ def get_extensions():
     if debug_mode:
         extra_compile_args["cxx"].append("-g")
         extra_compile_args["nvcc"].append("-g")
-        # extra_compile_args["nvcc"].append("-G")
-        # extra_compile_args["nvcc"].append("-src-in-ptx")
+        extra_compile_args["nvcc"].append("-G")
+        extra_compile_args["nvcc"].append("-src-in-ptx")
         # extra_compile_args["nvcc"].append("arch=compute_90,code=sm_90")
         extra_link_args.extend(["-O0", "-g"])
 
